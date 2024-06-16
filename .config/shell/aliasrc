@@ -1,0 +1,90 @@
+#!/bin/sh
+
+# Navigation
+alias \
+  ..="cd .." \
+  ...="cd ../.." \
+  .3="cd ../../.." \
+  .4="cd ../../../.." \
+  .5="cd ../../../../.." \
+  .ls="cd ~/.local/share" \
+  config="cd ~/.config/" \
+  dl="cd ~/extra/dl" \
+  docs="cd ~/extra/docs" \
+  vids="cd ~/extra/vids" \
+  music="cd ~/extra/music" \
+  pics="cd ~/extra/pics" \
+  movies="vids; cd movies" \
+  tv="vids; cd tv" \
+  meme="vids; cd memes" \
+  pr="cd ~/proj/" \
+  downgrade="nvim ~/.local/downgrade" \
+  ls="exa" \
+  ll="exa -alh" \
+  tree="exa --tree" \
+  cat="bat" \
+  bk="cd ~/extra/docs/books" \
+  ldwm="cd ~/.local/src/dwm" \
+  lsdwm="cd ~/.local/share/dwm; nvim autostart.sh" \
+  bin="cd ~/.local/bin" \
+  sb="cd ~/.local/bin/statusbar" \
+  bkup="cd ~/projects/github/artix/" \
+  lb="cd ~/.local/bin" \
+  rs="cd ~/proj/rust" \
+  nf="fastfetch" \
+  prc="cd ~/proj/c" \
+
+# Too long 
+alias \
+  sdn="sudo shutdown -h now" \
+  z="zathura" \
+  v="nvim ." \
+  vim="nvim" \
+  smc="sudo make clean install" \
+  Hyprland="dbus-run-session Hyprland" \
+  s="dbus-run-session sway" \
+  vk="hyprctl plugin load ~/.local/share/hyprpm/csgo-vulkan-fix.so" \
+
+# Quality of life
+alias \
+  yta="music; yt-dlp --embed-metadata -xic -f bestaudio/best --restrict-filenames" \
+  yts="music; yt-dlp --embed-metadata -xic --audio-format mp3 --audio-quality 0 --restrict-filenames" \
+  ytm="meme; yt-dlp" \
+  cp="cp -i" \
+  mv="mv -i" \
+  rm="rm -i" \
+
+# system
+alias \
+  p="pacman" \
+  pqc="pacman -Qu | wc -l" \
+  sp="sudo pacman" \
+  sps="sudo pacman -S" \
+  pup="sudo pacman -Sy" \
+  pug="sudo pacman -Syu; pkill -RTMIN+8 i3blocks" \
+  sdn="loginctl poweroff" \
+
+# git
+alias \
+    g="git" \
+    gs="git status" \
+    ga="git add" \
+    gc="git commit -m" \
+    gp="git push" \
+    gpf="git push --force" \
+    gpl="git pull" \
+    gplr="git pull --recurse-submodules" \
+    grb="git rebase" \
+
+# Programming
+alias \
+  cr="cargo run" \
+  cn="cargo new" \
+  cb="cargo build" \
+  aliasrc="vim ~/.config/shell/aliasrc" \
+  zshrc="vim ~/.config/zsh/.zshrc" \
+  t="tmux" \
+  ts="tmux && tmux-sessionizer"\
+  ta="tmux a -t"\
+  tks="tmux kill-session -a -t"\
+  tns="tmux new -s"\

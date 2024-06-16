@@ -1,0 +1,27 @@
+#!/bin/sh 
+
+# Autostart
+# 3 xrandrs fix dwmblocks being displayed on wrong monitor
+
+xrandr --output DP-1 --mode 1920x1080 --rate 240 --primary --right-of HDMI-1 &
+xrandr --output HDMI-1 --mode 1920x1080 --rate 60 --left-of DP-1 &
+sleep 0.1 
+xrandr --output DP-1 --mode 1920x1080 --rate 240 --primary --right-of HDMI-1 &
+
+i3-blocks &
+
+pipewire &
+pipewire-pulse &
+wireplumber &
+
+xsetroot -solid "#313244"
+setxkbmap -option caps:escape &
+xsetroot -cursor_name left_ptr & 
+dunst &
+exec lxsession &
+exec signal-desktop --start-in-tray &
+killall openrgb 
+exec openrgb --startminimized --profile icey.orp &
+exec corectrl &
+
+xset r rate 280 60 & 

@@ -1,0 +1,16 @@
+[Default Applications]
+inode/directory=nemo.desktop
+application/x-gnome-saved-search=nemo.desktop
+image/png=imv.desktop
+application/pdf=org.pwmt.zathura.desktop
+application/x-zerosize=nvim.desktop
+text/html=librewolf.desktop
+x-scheme-handler/http=librewolf.desktop
+x-scheme-handler/https=librewolf.desktop
+x-scheme-handler/about=librewolf.desktop
+x-scheme-handler/unknown=librewolf.desktop
+
+[Added Associations]
+image/png=imv.desktop;
+application/pdf=org.pwmt.zathura.desktop;
+application/x-zerosize=nvim.desktop;

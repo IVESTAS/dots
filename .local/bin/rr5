@@ -1,0 +1,10 @@
+#!/bin/sh
+
+pkill wine
+
+pid1=$(pidof srt-bwrap)
+kill -9 $pid1
+
+pid2=$(pidof r5apex.exe)
+kill -9 $pid2
+

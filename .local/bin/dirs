@@ -1,0 +1,21 @@
+#!/bin/sh
+
+mkdir ~/extra 
+cd ~/extra
+mkdir pics
+mkdir vids
+mkdir dl
+mkdir docs
+mkdir music
+cd pics
+mkdir grim
+mkdir wallpapers
+cd ../vids
+mkdir movies
+mkdir tv
+mkdir irl
+cd ~/
+mkdir proj
+cd ~/proj
+mkdir c
+mkdir cpp

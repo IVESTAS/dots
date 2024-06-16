@@ -1,0 +1,26 @@
+#!/bin/sh
+
+exec i3-blocks &
+
+exec /usr/bin/pipewire &
+exec /usr/bin/pipewire-pulse &
+exec /usr/bin/wireplumber &
+
+exec swaymsg focus output DP-1 &
+
+exec dunst &
+exec lxsession &
+exec signal-desktop --start-in-tray &
+
+killall openrgb 
+exec openrgb --startminimized --profile icey.orp &
+
+exec swayidle -w \
+    timeout 600 'swaymsg "output * dpms off"' \
+        resume 'swaymsg "output * dpms off"' \
+    before-sleep 'playerctl pause' \ &
+
+sleep 2.0
+pkill -RTMIN+10 i3blocks
+sleep 8.0
+pkill -RTMIN+3 i3blocks 

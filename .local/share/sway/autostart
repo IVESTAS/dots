@@ -15,10 +15,7 @@ exec signal-desktop --start-in-tray &
 killall openrgb 
 exec openrgb --startminimized --profile icey.orp &
 
-exec swayidle -w \
-    timeout 600 'swaymsg "output * dpms off"' \
-        resume 'swaymsg "output * dpms off"' \
-    before-sleep 'playerctl pause' \ &
+exec hypridle &
 
 sleep 2.0
 pkill -RTMIN+10 i3blocks

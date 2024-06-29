@@ -14,6 +14,7 @@ interval=1
 [pacman]
 command=~/.local/bin/statusbar/sb-pacpackages
 interval=once
+#color=#A4C2F4
 signal=8
 
 [sep]
@@ -39,6 +40,7 @@ signal=10
 
 [ip]
 command=~/.local/bin/statusbar/sb-ip
+color=#91E78B
 interval=3
 
 [sep]

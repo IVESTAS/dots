@@ -45,6 +45,8 @@ require('lspconfig')['hls'].setup {
 
 require('lspconfig').svelte.setup {}
 
+require'lspconfig'.marksman.setup{}
+
 require('lspconfig').rust_analyzer.setup {
     on_init = function(client, _)
         client.server_capabilities.semanticTokensProvider = nil -- turn off semantic tokens

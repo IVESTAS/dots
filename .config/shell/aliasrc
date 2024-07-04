@@ -44,6 +44,7 @@ alias \
   Hyprland="dbus-run-session Hyprland" \
   s="dbus-run-session sway" \
   vk="hyprctl plugin load ~/.local/share/hyprpm/csgo-vulkan-fix.so" \
+  ns="cd ~/extra/docs/Obsidian/" \
 
 # Quality of life
 alias \
@@ -53,6 +54,7 @@ alias \
   cp="cp -i" \
   mv="mv -i" \
   rm="rm -i" \
+  notes="cd ~/extra/docs/Obsidian && notes" \
 
 # system
 alias \

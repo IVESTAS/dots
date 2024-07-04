@@ -84,4 +84,4 @@ map gM cd ~/extra/vids/memes
 map gt cd ~/extra/vids/tv
 map gb cd ~/extra/docs/books
 map gB cd ~/.local/bin
-map gr cd ~/extra/repos/
+map go cd ~/extra/docs/Obsidian

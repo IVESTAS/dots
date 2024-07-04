@@ -1,5 +1,10 @@
 #!/bin/sh
+
+# got this script from https://github.com/mischavandenburg/dotfiles/blob/main/scripts/zet
+# https://mischavandenburg.com/zet/neovim-zettelkasten/
+
 cd "/home/dom/extra/docs/Obsidian/"
+
 # function to prompt the user for a filename
 get_filename() {
 	read -p "Enter a filename: " filename
@@ -48,10 +53,11 @@ fi
 
 # if more than one argument is given, print error message and stop script
 if [[ $# -gt 1 ]]; then
-	echo "Please provide only one filename separated by dashes, without .md extension."
-	echo "Example: zet my-new-note"
+	echo "Please provide only one filename separated by underscores, without .md extension."
+	echo "Example: notes new_file"
 	exit 1
 fi
+
 # set filename to the argument given to the script
 if [[ $# -eq 1 ]]; then
 	filename=$1

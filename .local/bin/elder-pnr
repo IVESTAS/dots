@@ -1,0 +1,9 @@
+#!/bin/sh
+
+pidElden=$(pidof eldenring.exe)
+
+if [ "$(ps -o state= -p $pidElden)" = T ]; then
+    kill -CONT $pidElden
+else 
+    kill -STOP $pidElden
+fi

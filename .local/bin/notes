@@ -3,7 +3,7 @@ cd "/home/dom/extra/docs/Obsidian/"
 # function to prompt the user for a filename
 get_filename() {
 	read -p "Enter a filename: " filename
-	echo "$filename"
+	echo "${filename//[ .-,]/_}" # if filename was typed wrong, replace with underscores 
 }
 
 # function to create and open a file in the specified directory
@@ -18,7 +18,6 @@ open_file() {
 	time="$(date +"%Y-%m-%d %H:%M")"
 
     title="$(echo "$filename" | tr '_' ' ')"
-
 
 	# format the file
 	{
@@ -53,9 +52,10 @@ if [[ $# -gt 1 ]]; then
 	echo "Example: zet my-new-note"
 	exit 1
 fi
-
 # set filename to the argument given to the script
 if [[ $# -eq 1 ]]; then
 	filename=$1
 fi
-open_file "/home/dom/extra/docs/Obsidian/6-Main/" 
+
+open_file "/home/dom/extra/docs/Obsidian/4-Main/" 
+

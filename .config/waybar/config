@@ -1,13 +1,14 @@
 [{
     "output": "DP-1",
     "layer": "bottom",
-    "spacing": 1,
-    "margin-top": 4,
-    "margin-left": 4,
-    "margin-right": 4,
+    "spacing": 0,
+    "position": "bottom",
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
 	"modules-left": ["tray","custom/separator","custom/packages","custom/separator","hyprland/window"],
     "modules-center": ["hyprland/workspaces"],
-	"modules-right": ["custom/net","custom/separator","custom/temp","custom/separator","pulseaudio","custom/separator","custom/ip", "custom/separator", "clock"],
+	"modules-right": ["custom/net","custom/separator","custom/temp","custom/separator","pulseaudio","custom/separator","custom/ip", "custom/separator", "custom/date"],
 
   "hyprland/workspaces": {
         "active-only": false,
@@ -32,7 +33,7 @@
 
   "hyprland/window": {
     "format": "{}",
-    "max-length": 50,
+    "max-length": 70,
   },
 
     "custom/separator": {
@@ -111,6 +112,15 @@
             "charging": ["󰢜","󰂆","󰂇","󰂈","󰢝","󰂉","󰢞","󰂊","󰂋","󰂄"],
     }
   },
+
+  
+  "custom/date": {
+    "format": "{}",
+    "exec": "$HOME/.local/bin/waybar/sb-day",
+    "interval": 1, 
+  },
+
+
 
   "tray": {
       "icon-size": 16,

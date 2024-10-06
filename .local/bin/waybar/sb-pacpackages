@@ -1,0 +1,5 @@
+#!/bin/sh
+
+upd="$(pacman -Qu | wc -l)"
+
+echo "$upd"

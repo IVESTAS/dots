@@ -18,7 +18,7 @@
 
 * {
         font-family: JetBrainsMono Nerd Font;
-        font-size: 12px;
+        font-size: 12px; /* 10 and 12 */
         padding: 0 0px;
         margin: -1px;
         opacity: 1;
@@ -53,14 +53,15 @@
     #window,
     #custom-pacman,
     #custom-time,
+
     #tray {
         background-color: @bg;
-        padding: 0 2px;
+        padding: 0 5px;
         margin: 0 0px;
 
 }
     #workspaces {
-        padding: 3 0px;
+        padding: 3 0px; /* change between 2 and 3 */
     }
 
     #workspaces button {
@@ -132,7 +133,7 @@
     }
 
     #clock {
-        padding: 0 0;
+        padding: 0 2;
         color: @text;
     }
 

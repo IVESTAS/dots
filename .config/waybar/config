@@ -1,14 +1,14 @@
 [{
     "output": "DP-1",
     "layer": "bottom",
-    "spacing": 0,
+    "spacing": 1,
     "position": "bottom",
     "margin-top": 0,
     "margin-left": 0,
     "margin-right": 0,
 	"modules-left": ["tray","custom/separator","custom/packages","custom/separator","hyprland/window"],
     "modules-center": ["hyprland/workspaces"],
-	"modules-right": ["custom/net","custom/separator","custom/temp","custom/separator","pulseaudio","custom/separator","custom/ip", "custom/separator", "custom/date"],
+	"modules-right": ["network#2","custom/separator","custom/temp","custom/separator","pulseaudio","custom/separator","network", "custom/separator", "clock"],
 
   "hyprland/workspaces": {
         "active-only": false,
@@ -56,14 +56,14 @@
   },
 
   "custom/temp": {
-    "format": "  {}",
+    "format": "{}",
     "exec": "$HOME/.local/bin/waybar/sb-temp",
     "interval": 3,
   },
 
   "pulseaudio": {
-  "format": "{icon} {volume}%  {format_source}",
-  "format-muted": "󰝟   {format_source}",
+  "format": "Vol: {volume}%",
+  "format-muted": "MUTED",
   "format-source": "",
   "format-source-muted": "",
   "format-icons": {
@@ -96,8 +96,8 @@
 
   "clock": {
     "interval": 1,
-    "format": "{:%I:%M %p}",
-    "max-length": 25
+    "format": "{:L%A, %d %B %I:%M %p }",
+    "max-length": 50
   },
 
   "battery": {
@@ -120,11 +120,25 @@
     "interval": 1, 
   },
 
+  "network": {
+    "interface": "eth0",
+    "format": "{ipaddr}",
+    "format-disconnected":"N/A",
+
+  },
+
+  "network#2": {
+    "interface": "eth0",
+    "format": "  {bandwidthDownBytes},   {bandwidthUpBytes}",
+    "format-disconnected":"N/A",
+    "interval": 1,
+  },
+
 
 
   "tray": {
       "icon-size": 16,
-	  "spacing": 10
+	  "spacing": 12
 	},
 },
 {

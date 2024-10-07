@@ -42,17 +42,16 @@
 
     #workspaces,
     #window,
-    #custom-net,
     #custom-packages,
     #custom-battery,
     #custom-separator,
     #cpu,
     #pulseaudio,
-    #custom-ip,
-    #custom-date,
     #window,
     #custom-pacman,
-    #custom-time,
+    #network,
+    #network2,
+    #clock,
 
     #tray {
         background-color: @bg;
@@ -83,7 +82,7 @@
     }
 
     #custom-separator {
-        padding: 0 5px;
+        padding: 0 2px;
         color: @blue;
     }
 
@@ -93,7 +92,7 @@
     }
 
     #battery {
-        padding: 0 10px;
+        padding: 0 2px;
         color: @text;
     }
 
@@ -108,32 +107,26 @@
     }
 
     #window {
-        padding: 0 2px;
+        padding: 0 4px;
         color: @text;
     }
 
     #pulseaudio {
-        padding: 0 2;
+        padding: 0 2px;
         color: @text;
     }
 
-    #custom-ip {
-        padding: 0 2;
-        color: @text;
+    #network {
+        padding:0 2px;
+        color:@text;
     }
 
-    #custom-date {
-        padding: 0 2;
-        color: @text;
-    }
-
-    #custom-time {
-        padding: 0 0;
-        color: @text;
+    #network#2 {
+        padding:0 2px;
+        color:@text;
     }
 
     #clock {
-        padding: 0 2;
+        padding: 0 2px;
         color: @text;
     }
-

@@ -1,5 +1,4 @@
-[{
-    "output": "DP-1",
+{
     "layer": "bottom",
     "spacing": 1,
     "position": "bottom",
@@ -28,6 +27,7 @@
         "7": "VII",
         "8": "VIII",
         "9": "IX",
+        "10": "X",
         },
   },
 
@@ -73,8 +73,6 @@
       "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
       "on-click-middle": "pavucontrol"
   },
-
-
 
   "custom/ip": {
     "format": "{}",
@@ -129,7 +127,7 @@
 
   "network#2": {
     "interface": "eth0",
-    "format": "  {bandwidthDownBytes},   {bandwidthUpBytes}",
+    "format": "  {bandwidthDownBytes}   {bandwidthUpBytes}",
     "format-disconnected":"N/A",
     "interval": 1,
   },
@@ -141,127 +139,4 @@
 	  "spacing": 12
 	},
 },
-{
-    "output": "HDMI-A-1",
-	"height": 20, 
-    "width": 1904,
-    "layer": "top",
-    "spacing": 1,
-    "margin-top": 6,
-    "margin-left": 4,
-    "margin-right": 4,
-	"modules-left": ["custom/date", "hyprland/window"],
-    "modules-center": ["hyprland/workspaces"],
-	"modules-right": ["battery","battery#hiddp2", "battery#hiddp3","custom/packages", "custom/temp","pulseaudio","custom/date"],
 
-  "hyprland/workspaces": {
-       "active-only": false,
-        "all-outputs": "true",
-        "on-scroll-up": "hyprctl dispatch workspace e+1",
-        "on-scroll-down": "hyprctl dispatch workspace e-1",
-        "disable-scroll": false,
-        "format": "{icon}",
-        "on-click": "activate",
-  },
-
-  "hyprland/window": {
-    "format": "{}",
-    "max-length": 50,
-  },
-
-    "custom/separator": {
-    "format": "|",
-    "interval": "once",
-  },
-
-
-  "custom/net": {
-    "format": "{}",
-    "exec": "$HOME/.local/bin/waybar/sb-net",
-    "interval": 1,
-  },
-
-  "custom/packages": {
-    "format": "{} Update(s)",
-    "interval": "once",
-    "exec": "$HOME/.local/bin/waybar/sb-pacpackages",
-    "signal": 8,
-  },
-
-  "custom/temp": {
-    "format": "{}",
-    "exec": "$HOME/.local/bin/waybar/sb-temp",
-    "interval": 3,
-  },
-
-  "pulseaudio": {
-    "format": "{icon} {volume}%  {format_source}",
-    "format-muted": "󰝟 {format_source}",
-    "format-source": "",
-    "format-source-muted": "",
-    "format-icons": {
-	"default": ["", "", " "],
-    },
-        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-        "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
-        "on-click-middle": "pavucontrol"
-	},
-
-  "custom/ip": {
-    "format": "{}",
-    "exec": "$HOME/.local/bin/waybar/sb-ip",
-    "interval": 3,
-  },
-
-  "custom/date": {
-    "format": "{}",
-    "exec": "$HOME/.local/bin/waybar/sb-day",
-    "interval": 1, 
-  },
-
-  "battery": {
-    "bat": "hidpp_battery_0",
-    "interval": 5,
-    "full-at": 100,
-    "states": {"warning": 30, "critical": 15},
-    "format": "{icon} {capacity}%",
-    "format-charging": "{icon} {capacity}%",
-    "format-icons": {
-            "default": ["󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"],
-            "charging": ["󰢜","󰂆","󰂇","󰂈","󰢝","󰂉","󰢞","󰂊","󰂋","󰂄"],
-    }
-  },
-
-  "battery#hiddp1": {
-    "bat": "hidpp_battery_1",
-    "interval": 5,
-    "full-at": 100,
-    "states": {"warning": 30, "critical": 15},
-    "format": "{icon} {capacity}%",
-    "format-charging": "{icon} {capacity}%",
-    "format-icons": {
-            "default": ["󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"],
-            "charging": ["󰢜","󰂆","󰂇","󰂈","󰢝","󰂉","󰢞","󰂊","󰂋","󰂄"],
-    }
-  },
-
-    "battery#hiddp2": {
-     "bat": "hidpp_battery_2",
-     "interval": 5,
-     "full-at": 100,
-     "states": {"warning": 30, "critical": 15},
-     "format": "{icon} {capacity}%",
-     "format-charging": "{icon} {capacity}%",
-     "format-icons": {
-             "default": ["󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"],
-             "charging": ["󰢜","󰂆","󰂇","󰂈","󰢝","󰂉","󰢞","󰂊","󰂋","󰂄"],
-    }
-  },
-
-  "tray": {
-      "icon-size": 14,
-	  "spacing": 10
-	},
-
-
-},]

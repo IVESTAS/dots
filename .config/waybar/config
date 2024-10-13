@@ -1,0 +1,124 @@
+{
+    "layer": "bottom",
+    "spacing": 1,
+    "position": "bottom",
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+	"modules-left": ["tray","custom/separator","custom/packages","custom/separator","hyprland/window"],
+    "modules-center": ["hyprland/workspaces"],
+	"modules-right": ["network#2","custom/separator","custom/temp","custom/separator","custom/vol","custom/separator", "network", "custom/separator", "clock"],
+
+  "hyprland/workspaces": {
+        "active-only": false,
+        "all-outputs": "true",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "disable-scroll": false,
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+        "1": "I",
+        "2": "II",
+        "3": "III",
+        "4": "IV",
+        "5": "V",
+        "6": "VI",
+        "7": "VII",
+        "8": "VIII",
+        "9": "IX",
+        "10": "X",
+        },
+  },
+
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 60,
+  },
+
+    "custom/separator": {
+    "format": "󰧞",
+    "interval": "once",
+  },
+
+
+  "custom/net": {
+    "format": "{}",
+    "exec": "$HOME/.local/bin/waybar/sb-net",
+    "interval": 1,
+  },
+
+  "custom/223": {
+    "format": "{}",
+    "exec": "$HOME/.local/bin/waybar/223",
+    "interval": 1,
+  },
+
+  "custom/vol": {
+    "format": "{}",
+    "exec": "$HOME/.local/bin/waybar/sb-volume",
+    "signal": 10,
+  },
+
+  "custom/packages": {
+    "format": "{}",
+    "interval": "once",
+    "exec": "$HOME/.local/bin/waybar/sb-pacpackages",
+    "signal": 8,
+  },
+
+  "custom/temp": {
+    "format": "{}",
+    "exec": "$HOME/.local/bin/waybar/sb-temp",
+    "interval": 3,
+  },
+
+  "pulseaudio": {
+  "format": "Volume: {volume}%",
+  "format-muted": "MUTED",
+  "format-source": "",
+  "format-source-muted": "",
+  "format-icons": {
+  "default": ["", "", " "],
+  },
+      "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+      "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+      "on-click-middle": "pavucontrol"
+  },
+
+  "clock": {
+    "interval": 1,
+    "format": "{:L%A, %d %B %I:%M %p }",
+    "max-length": 50
+  },
+
+  "battery": {
+    "bat": "hidpp_battery_0",
+    "interval": 5,
+    "full-at": 100,
+    "states": {"warning": 30, "critical": 15},
+    "format": "{capacity}%",
+    "format-charging": "{capacity}%",
+  },
+
+   "network": {
+    "interface": "eth0",
+    "format": "{ipaddr}",
+    "format-disconnected":"N/A",
+
+  },
+
+  "network#2": {
+    "interface": "eth0",
+    "format": "{bandwidthDownBytes}  {bandwidthUpBytes}",
+    "format-disconnected":"N/A",
+    "interval": 1,
+  },
+
+
+  "tray": {
+      /* "icon-size": 16, */
+	  "spacing": 10
+	},
+},
+

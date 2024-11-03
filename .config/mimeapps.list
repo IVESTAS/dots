@@ -1,16 +1,28 @@
 [Default Applications]
-inode/directory=nemo.desktop
+inode/directory=thunar.desktop
 application/x-gnome-saved-search=nemo.desktop
 image/png=imv.desktop
 application/pdf=org.pwmt.zathura.desktop
 application/x-zerosize=nvim.desktop
 text/html=librewolf.desktop
-x-scheme-handler/http=librewolf.desktop
-x-scheme-handler/https=librewolf.desktop
+x-scheme-handler/http=xfce4-web-browser.desktop
+x-scheme-handler/https=xfce4-web-browser.desktop
 x-scheme-handler/about=librewolf.desktop
 x-scheme-handler/unknown=librewolf.desktop
+image/jpeg=imv.desktop
 
 [Added Associations]
 image/png=imv.desktop;
 application/pdf=org.pwmt.zathura.desktop;
 application/x-zerosize=nvim.desktop;
+application/x-shellscript=codium-wayland.desktop;wine-extension-txt.desktop;
+text/x-csrc=codium-wayland.desktop;
+application/x-wine-extension-ini=codium-wayland.desktop;
+text/plain=codium-wayland.desktop;
+application/x-mswinurl=codium-wayland.desktop;
+text/javascript=codium-wayland.desktop;librewolf.desktop;
+text/html=codium-wayland.desktop;brave-browser.desktop;
+x-scheme-handler/http=xfce4-web-browser.desktop;
+x-scheme-handler/https=xfce4-web-browser.desktop;
+application/x-msdownload=steam.desktop;
+application/vnd.microsoft.portable-executable=wine.desktop;

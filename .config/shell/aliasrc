@@ -19,10 +19,7 @@ alias \
   meme="vids; cd memes" \
   pr="cd ~/proj/" \
   downgrade="nvim ~/.local/downgrade" \
-  ls="exa" \
-  ll="exa -alh" \
   tree="exa --tree" \
-  cat="bat" \
   bk="cd ~/extra/docs/books" \
   ldwm="cd ~/.local/src/dwm" \
   lsdwm="cd ~/.local/share/dwm; nvim autostart.sh" \
@@ -30,19 +27,15 @@ alias \
   sb="cd ~/.local/bin/statusbar" \
   bkup="cd ~/projects/github/artix/" \
   lb="cd ~/.local/bin" \
-  rs="cd ~/proj/rust" \
   nf="fastfetch" \
-  prc="cd ~/proj/c" \
+  bashrc="nvim ~/.bashrc" \
 
 # Too long 
 alias \
   sdn="sudo shutdown -h now" \
-  z="zathura" \
   v="nvim ." \
-  vim="nvim" \
-  smc="sudo make clean install" \
+  vi="nvim" \
   Hyprland="dbus-run-session Hyprland" \
-  s="dbus-run-session sway" \
   vk="hyprctl plugin load ~/.local/share/hyprpm/csgo-vulkan-fix.so" \
   ns="cd ~/extra/docs/Obsidian/" \
 
@@ -50,7 +43,8 @@ alias \
 alias \
   yta="music; yt-dlp --embed-metadata -xic -f bestaudio/best --restrict-filenames" \
   yts="music; yt-dlp --embed-metadata -xic --audio-format mp3 --audio-quality 0 --restrict-filenames" \
-  ytm="meme; yt-dlp" \
+  ytm="meme; yt-dlp --restrict-filenames" \
+  ytf="vids; yt-dlp -f bestvideo+bestaudio" \
   cp="cp -i" \
   mv="mv -i" \
   rm="rm -i" \
@@ -59,11 +53,9 @@ alias \
 # system
 alias \
   p="pacman" \
-  pqc="pacman -Qu | wc -l" \
   sp="sudo pacman" \
   sps="sudo pacman -S" \
-  pup="sudo pacman -Sy" \
-  pug="sudo pacman -Syu; pkill -RTMIN+8 i3blocks" \
+  pug="sudo pacman -Syu; pkill -RTMIN+8 waybar" \
   sdn="loginctl poweroff" \
 
 # git
@@ -83,8 +75,8 @@ alias \
   cr="cargo run" \
   cn="cargo new" \
   cb="cargo build" \
-  aliasrc="vim ~/.config/shell/aliasrc" \
-  zshrc="vim ~/.config/zsh/.zshrc" \
+  aliasrc="nvim ~/.config/shell/aliasrc" \
+  zshrc="nvim ~/.config/zsh/.zshrc" \
   t="tmux" \
   ts="tmux && tmux-sessionizer"\
   ta="tmux a -t"\

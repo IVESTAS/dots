@@ -36,7 +36,10 @@ export HISTFILE=~/.bash_history
 export HISTTIMEFORMAT="%F %T "
 
 #PS1='\u@\[\033[34m\]\h\[\033[0m\]:[\W]# '
-PS1='\u@\[\033[34m\]\h\[\033[0m\]:[\W]\$ '
+#PS1='\u@\[\033[34m\]\h\[\033[0m\]:[\W]\$ '
+#PS1='\u@\h:\w\$ '
+PS1='\u@\[\033[34m\]\h\[\033[0m\]:\[\033[37m\][\W]\[\033[0m\]\$ '
+
 # /u is username
 # \[\033[34m\]: Blue color for the hostname.
 # \h: The hostname (short version).

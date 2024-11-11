@@ -46,3 +46,13 @@ PS1='\u@\[\033[34m\]\h\[\033[0m\]:\[\033[37m\][\W]\[\033[0m\]\$ '
 # \[\033[0m\]: Resets the color back to normal.
 # \W: This shows only the last component of the current working directory 
 # (i.e., just the current directory name, not the full path).
+#
+
+# Blue: \033[34m
+# Red: \033[31m
+# Green: \033[32m
+# Yellow: \033[33m
+# Magenta: \033[35m
+# Cyan: \033[36m
+# White: \033[37m
+# Reset: \033[0m

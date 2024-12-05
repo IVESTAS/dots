@@ -20,17 +20,12 @@ pipewire pipewire-pulse wireplumber
 # Fonts
 noto-fonts-emoji ttf-jetbrains-mono-nerd
 
-# Not needed / Only for gaming
-goverlay gamemode corectrl steam
-
 # gaming?
-mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader
+mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader 
+goverlay gamemode corectrl steam
 
 # AUR 
 yay htop-vim spotify epson-inkjet-printer-201308w librewolf-bin
-
-# libraries
-raylib
 
 # qemu + kvm
 qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat libvirt libvirt-runit

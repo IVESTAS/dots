@@ -1,0 +1,4 @@
+#!/bin/sh
+
+grim -o DP-1 - | wl-copy
+notify-send "DP-1 Screenshotted"

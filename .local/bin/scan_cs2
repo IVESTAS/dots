@@ -1,0 +1,16 @@
+#!/bin/sh
+
+pidCs2=$(pidof cs2)
+
+if [ -z "$pidCs2" ]; then
+    echo "Cs2 not found"
+else
+    echo "PID of cs2 is: $pidCs2"
+
+  # Check the /proc/<pid>/maps file for the shared object "Leather"
+  if grep -q "Leather" /proc/$pidCs2/maps; then
+    echo "Found 'Leather' in /proc/$pidCs2/maps"
+  else
+    echo "'Leather' not found in /proc/$pidCs2/maps"
+  fi
+fi

@@ -39,7 +39,7 @@ vim.g.netrw_banner = 0
 
 vim.opt.background = "dark"  -- or "dark" based on your preference
 -- Replace with the actual path to your theme.vim file
-vim.cmd('source ~/proj/vim-theme/cyacid.vim')
+vim.cmd('source ~/.config/nvim/lua/dom/colors/cyacid.vim')
 
 -- Define the key mapping
 vim.api.nvim_set_keymap('n', '<Leader>st', ':lua ToggleBackground()<CR>', { noremap = true, silent = true })

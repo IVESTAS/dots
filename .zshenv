@@ -5,24 +5,14 @@ export TERMINAL="foot"
 export BROWSER="librewolf"
 export SUDO_EDITOR=/usr/bin/vim
 
-#export QT_QPA_PLATFORMTHEME="qt5ct"
-
-#export QT_QPA_PLATFORM=wayland 
-#export XDG_CURRENT_DESKTOP=sway
-#export XDG_SESSION_DESKTOP=sway
-#export XDG_CURRENT_SESSION_TYPE=wayland
-#export GDK_BACKEND="wayland,x11"
-#export MOZ_ENABLE_WAYLAND=1
-
 # PATHS
-#export PATH= ~/.local/bin/:$PATH
 export PATH="$HOME/.local/bin/:$PATH"
 export PATH="$HOME/.local/bin/statusbar:$PATH"
-export ZSH="$HOME/.config/zsh/ohmyzsh/"
+export PATH="$HOME/.local/bin/resolve/bin:$PATH"
 
 # XDG paths
 export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
-export XDG_CACHE_HOME=${XDG_CACHE_HOME:="$HOME/.cache"}
+export XDG_CACHE_HOME=${XDG_CACHE_HOME:="$HOME/.cache/"}
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
 
 # Disable files
@@ -42,8 +32,3 @@ export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export VSCODE_PORTABLE="$XDG_DATA_HOME"/vscode
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
-
-
-# Sources
-#source "$HOME/.local/share/cargo/env"
-#source SVDIR=~/.config/service

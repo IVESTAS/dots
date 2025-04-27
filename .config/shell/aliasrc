@@ -2,61 +2,63 @@
 
 # Navigation
 alias \
-  ..="cd .." \
-  ...="cd ../.." \
-  .3="cd ../../.." \
-  .4="cd ../../../.." \
-  .5="cd ../../../../.." \
-  .ls="cd ~/.local/share" \
-  config="cd ~/.config/" \
-  dl="cd ~/extra/dl" \
-  docs="cd ~/extra/docs" \
-  vids="cd ~/extra/vids" \
-  music="cd ~/extra/music" \
-  pics="cd ~/extra/pics" \
-  movies="vids; cd movies" \
-  tv="vids; cd tv" \
-  meme="vids; cd memes" \
-  pr="cd ~/proj/" \
-  downgrade="nvim ~/.local/downgrade" \
-  tree="exa --tree" \
-  bk="cd ~/extra/docs/books" \
-  ldwm="cd ~/.local/src/dwm" \
-  lsdwm="cd ~/.local/share/dwm; nvim autostart.sh" \
-  bin="cd ~/.local/bin" \
-  sb="cd ~/.local/bin/statusbar" \
-  bkup="cd ~/projects/github/artix/" \
-  lb="cd ~/.local/bin" \
-  nf="fastfetch" \
-  bashrc="nvim ~/.bashrc" \
+    ..="cd .." \
+    ...="cd ../.." \
+    .3="cd ../../.." \
+    .4="cd ../../../.." \
+    .5="cd ../../../../.." \
+    .ls="cd ~/.local/share" \
+    config="cd ~/.config/" \
+    dl="cd ~/extra/dl" \
+    docs="cd ~/extra/docs" \
+    vids="cd ~/extra/vids" \
+    music="cd ~/extra/music" \
+    pics="cd ~/extra/pics" \
+    movies="vids; cd movies" \
+    tv="vids; cd tv" \
+    meme="vids; cd memes" \
+    pr="cd ~/proj/" \
+    downgrade="nvim ~/.local/downgrade" \
+    tree="exa --tree" \
+    bk="cd ~/extra/docs/books" \
+    ls="ls --color=auto" \
+    ldwm="cd ~/.local/src/dwm" \
+    lsdwm="cd ~/.local/share/dwm; nvim autostart.sh" \
+    bin="cd ~/.local/bin" \
+    sb="cd ~/.local/bin/statusbar" \
+    bkup="cd ~/projects/github/artix/" \
+    lb="cd ~/.local/bin" \
+    nf="fastfetch" \
+    bashrc="nvim ~/.bashrc" \
 
 # Too long 
 alias \
-  sdn="sudo shutdown -h now" \
-  v="nvim ." \
-  vi="nvim" \
-  Hyprland="dbus-run-session Hyprland" \
-  vk="hyprctl plugin load ~/.local/share/hyprpm/csgo-vulkan-fix.so" \
-  ns="cd ~/extra/docs/Obsidian/" \
+    sdn="sudo shutdown -h now" \
+    v="nvim ." \
+    vi="nvim" \
+    nv="nvim" \
+    Hyprland="dbus-run-session Hyprland" \
+    vk="hyprctl plugin load ~/.local/share/hyprpm/csgo-vulkan-fix.so" \
+    ns="cd ~/extra/docs/Obsidian/" \
 
 # Quality of life
 alias \
-  yta="music; yt-dlp --embed-metadata -xic -f bestaudio/best --restrict-filenames" \
-  yts="music; yt-dlp --embed-metadata -xic --audio-format mp3 --audio-quality 0 --restrict-filenames" \
-  ytm="meme; yt-dlp --restrict-filenames" \
-  ytf="vids; yt-dlp -f bestvideo+bestaudio" \
-  cp="cp -i" \
-  mv="mv -i" \
-  rm="rm -i" \
-  notes="cd ~/extra/docs/Obsidian && notes" \
+    yta="music; yt-dlp --embed-metadata -xic -f bestaudio/best --restrict-filenames" \
+    yts="music; yt-dlp --embed-metadata -xic --audio-format mp3 --audio-quality 0 --restrict-filenames" \
+    ytm="meme; yt-dlp --restrict-filenames" \
+    ytf="vids; yt-dlp -f bestvideo+bestaudio" \
+    cp="cp -i" \
+    mv="mv -i" \
+    rm="rm -i" \
+    notes="cd ~/extra/docs/Obsidian && notes" \
 
 # system
 alias \
-  p="pacman" \
-  sp="sudo pacman" \
-  sps="sudo pacman -S" \
-  pug="sudo pacman -Syu; pkill -RTMIN+8 waybar" \
-  sdn="loginctl poweroff" \
+    p="pacman" \
+    sp="sudo pacman" \
+    sps="sudo pacman -S" \
+    pug="sudo pacman -Syu; pkill -RTMIN+8 waybar" \
+    sdn="loginctl poweroff" \
 
 # git
 alias \
@@ -69,16 +71,15 @@ alias \
     gpl="git pull" \
     gplr="git pull --recurse-submodules" \
     grb="git rebase" \
-
 # Programming
 alias \
-  cr="cargo run" \
-  cn="cargo new" \
-  cb="cargo build" \
-  aliasrc="nvim ~/.config/shell/aliasrc" \
-  zshrc="nvim ~/.config/zsh/.zshrc" \
-  t="tmux" \
-  ts="tmux && tmux-sessionizer"\
-  ta="tmux a -t"\
-  tks="tmux kill-session -a -t"\
-  tns="tmux new -s"\
+    cr="cargo run" \
+    cn="cargo new" \
+    cb="cargo build" \
+    aliasrc="nvim ~/.config/shell/aliasrc" \
+    zshrc="nvim ~/.config/zsh/.zshrc" \
+    t="tmux" \
+    ts="tmux && tmux-sessionizer"\
+    ta="tmux a -t"\
+    tks="tmux kill-session -a -t"\
+    tns="tmux new -s"\

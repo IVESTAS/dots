@@ -8,7 +8,7 @@
 
 * {
         padding: 0px 0px;
-        margin: -1px;
+        margin: 0px;
         opacity: 1;
 }
 
@@ -42,9 +42,16 @@
     #network2,
     #clock,
     #custom-vol,
+    #privacy,
     #tray,
 
     #tray {
+        background-color: @bg;
+        padding: 0 5px;
+        margin: 0 0px;
+    }
+
+    #privacy {
         background-color: @bg;
         padding: 0 5px;
         margin: 0 0px;
@@ -125,15 +132,14 @@
     #network {
         padding:0 2px;
         color:@text;
-         font-family: JetBrainsMono Nerd Font;
+        font-family: JetBrainsMono Nerd Font;
         font-size: 12px; /* 10 and 12 */
-
     }
 
     #network#2 {
         padding:0 2px;
         color:@text;
-         font-family: JetBrainsMono Nerd Font;
+        font-family: JetBrainsMono Nerd Font;
         font-size: 12px; /* 10 and 12 */
 
     }

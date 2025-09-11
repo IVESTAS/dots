@@ -18,28 +18,30 @@ alias \
     tv="vids; cd tv" \
     meme="vids; cd memes" \
     pr="cd ~/proj/" \
-    downgrade="nvim ~/.local/downgrade" \
+    downgrade="vim ~/.local/downgrade" \
     tree="exa --tree" \
     bk="cd ~/extra/docs/books" \
     ls="ls --color=auto" \
     ldwm="cd ~/.local/src/dwm" \
-    lsdwm="cd ~/.local/share/dwm; nvim autostart.sh" \
+    lsdwm="cd ~/.local/share/dwm; vim autostart.sh" \
     bin="cd ~/.local/bin" \
     sb="cd ~/.local/bin/statusbar" \
     bkup="cd ~/projects/github/artix/" \
     lb="cd ~/.local/bin" \
     nf="fastfetch" \
-    bashrc="nvim ~/.bashrc" \
+    bashrc="vim ~/.bashrc" \
+    rl="vim ~/extra/docs/runlogs/may.11.2025"\ 
 
 # Too long 
 alias \
     sdn="sudo shutdown -h now" \
-    v="nvim ." \
-    vi="nvim" \
+    v="vim ." \
+    vi="vim" \
     nv="nvim" \
     Hyprland="dbus-run-session Hyprland" \
     vk="hyprctl plugin load ~/.local/share/hyprpm/csgo-vulkan-fix.so" \
     ns="cd ~/extra/docs/Obsidian/" \
+    hcs2="hyprpm enable csgo-vulkan-fix" \
 
 # Quality of life
 alias \
@@ -71,15 +73,17 @@ alias \
     gpl="git pull" \
     gplr="git pull --recurse-submodules" \
     grb="git rebase" \
+
 # Programming
 alias \
     cr="cargo run" \
     cn="cargo new" \
     cb="cargo build" \
-    aliasrc="nvim ~/.config/shell/aliasrc" \
-    zshrc="nvim ~/.config/zsh/.zshrc" \
+    aliasrc="vim ~/.config/shell/aliasrc" \
+    zshrc="vim ~/.config/zsh/.zshrc" \
     t="tmux" \
     ts="tmux && tmux-sessionizer"\
     ta="tmux a -t"\
     tks="tmux kill-session -a -t"\
     tns="tmux new -s"\
+    hss="hugo server --noHTTPCache"\

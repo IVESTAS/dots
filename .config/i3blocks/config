@@ -1,51 +1,85 @@
 full_text=|
 align=center
 separator=false
-separator_block_width=5
+separator_block_width=7
+
+
+#[bracket-left]
+#command=echo "["
+#interval=once
+#
+#[trillasFUCK]
+#command=~/.local/bin/statusbar/sb-taf
+#interval=1
+#align=center
+
+[sep]
+[root-dir]
+command=df -h / | awk 'NR==2 {printf "%s / %s\n", $3, $2}'
+interval=6000
+label=/: 
+
+#
+#[bracket-right]
+#command=echo "]"
+#interval=once
+
+#[sep]
+
+#[mem]
+#command=free -m | awk '/Mem:/ {printf "%d%%\n", $3*100/$2}'
+#interval=8
+#label=RAM:  
+
+#[sep]
+
+#[net]
+#command=~/.local/bin/statusbar/sb-net
+#interval=1
 
 [sep]
 
-[net]
-command=~/.local/bin/statusbar/sb-net
-interval=1
-
-[sep]
-
-[pacman]
-command=~/.local/bin/statusbar/sb-pacpackages
-interval=once
-#color=#A4C2F4
-signal=8
-
-[sep]
-
-[bat]
-command=sh ~/.local/bin/statusbar/sb-bat
-interval=60
-signal=3
-
-[sep]
-
-[temp]
-command=sh ~/.local/bin/statusbar/sb-temp
-interval=3
-signal=5
-[sep]
+#[bracket-left]
+#command=echo "["
+#interval=once
 
 [vol]
-command=~/.local/bin/statusbar/sb-volume
+command=~/.local/bin/statusbar/sb-vol
 interval=once
 signal=10
+
+#[bracket-right]
+#command=echo "]"
+#interval=once
+
 [sep]
+
+#[bracket-left]
+#command=echo "["
+#interval=once
+
 
 [ip]
 command=~/.local/bin/statusbar/sb-ip
-color=#91E78B
+#color=#91E78B
 interval=3
 
+#[bracket-right]
+#command=echo "]"
+#interval=once
+
 [sep]
+#
+#[bracket-left]
+#command=echo "["
+#interval=once
+
 
 [time]
-command=date "+%A, %d %b %Y %l:%M %p"
+command=~/.local/bin/statusbar/sb-day
 interval=1
+
+#[bracket-right]
+#command=echo "]"
+#interval=once
 

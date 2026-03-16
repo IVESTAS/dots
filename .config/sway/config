@@ -1,21 +1,26 @@
 exec ~/.local/share/sway/autostart
+exec dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
+#swaymsg -t get_outputs
 output DP-1 {
     mode 1920x1080@240Hz
-    pos 1920,0
+    pos 0,0
     #bg #313244 solid_color
     #bg ~/extra/pics/wallpapers/dark_abstract.png fill
-    bg ~/extra/pics/wallpapers/mac_os.jpg fill
-
+    #bg ~/extra/pics/wallpapers/mac_os.jpg fill
+		bg ~/extra/pics/wallpapers/winter.jpg fill
+    scale 1
+	  allow_tearing yes
 }
 
 output HDMI-A-1 {
     mode 1920x1080@60Hz
-    pos 0,0
+    pos -1920,0
     #bg #313244 solid_color
     #bg ~/extra/pics/wallpapers/dark_abstract.png fill
-    bg ~/extra/pics/wallpapers/mac_os.jpg fill
-
+  	bg ~/extra/pics/wallpapers/winter.jpg fill
+    scale 1
+    allow_tearing yes
 }
 
 focus output DP-1
@@ -38,7 +43,7 @@ input "type:pointer" {
     mouse_warping none
 
 # exit i3 (logs you out of your X session)
-    bindsym Mod4+Shift+Escape exec "swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'swaymsg exit'"
+    bindsym Mod4+Shift+Escape exec "swaymsg exit"
     bindsym $mod+mod1+Escape reload
 
 # Switch to workspace
@@ -73,6 +78,9 @@ input "type:pointer" {
     bindsym $mod+Shift+BackSpace exec loginctl poweroff 
     bindsym $mod+Shift+mod1+BackSpace exec loginctl reboot
 
+		bindsym $mod+F10 exec ~/.local/bin/save-replay.sh
+
+
 ###############################################################################
     
     bindsym $mod+Tab workspace back_and_forth
@@ -80,9 +88,9 @@ input "type:pointer" {
     bindsym $mod+Shift+q exec foot -e nmtui
     bindsym $mod+w exec librewolf 
     bindsym $mod+Shift+w exec firefox
-    bindsym $mod+e exec foot -e lf
+    bindsym $mod+e exec foot -e yazi 
     bindsym $mod+Shift+e exec foot -e htop
-    bindsym $mod+r exec nemo
+    bindsym $mod+r exec thunar 
     bindsym $mod+t layout toggle split 
     bindsym $mod+u layout tabbed
     bindsym $mod+Shift+u layout stacking
@@ -96,10 +104,11 @@ input "type:pointer" {
 ###############################################################################
 
     bindsym $mod+a exec --no-startup-id signal-desktop
-    bindsym $mod+Shift+a exec steam 
-    bindsym $mod+s exec spotify
-    bindsym $mod+d exec --no-startup-id bemenu-run -p "" --tb "#285577" --hb "#285577" --tf "#eeeeee" --hf "#eeeeee" --nf "#bbbbbb"
+    bindsym $mod+Shift+a exec steam --enable-features=UseOzonePlatform --ozone-platform=wayland
+    bindsym $mod+s exec --no-startup-id spotify-launcher
+    bindsym $mod+d exec --no-startup-id dmenu_run
     bindsym $mod+Shift+d exec librewolf https://discord.com/channels/@me
+		bindsym $mod+Alt+d exec vesktop 
     bindsym $mod+f fullscreen
     bindsym $mod+Shift+f floating toggle
     bindsym $mod+g workspace prev
@@ -119,7 +128,7 @@ input "type:pointer" {
     bindsym $mod+z exec  screenshot_selection
     bindsym $mod+mod1+z exec screenshot_selection
     bindsym $mod+x mode "resize"
-    bindsym $mod+c exec codium
+    #bindsym $mod+c exec codium
     bindsym $mod+v workspace back_and_forth
     bindsym $mod+m exec pavucontrol
     bindsym $mod+comma exec ~/.local/bin/spot_down
@@ -152,19 +161,29 @@ mode "resize" {
     workspace 9 output DP-1
     workspace 10 output HDMI-A-1
 
-#   for_window [class="^.*"] border pixel 2
+
+# if you want to remove titlebars
+#    for_window [class="^.*"] border pixel 2
+#   swaymsg -t get_tree
 
     for_window [class="Spotify"] move to workspace 2
+    for_window [app_id="spotify"] move to workspace 2
+
     for_window [class="Pavucontrol"] move to workspace 3
+
     for_window [class="steam"] move to workspace 5
     for_window [class="lutris"] move to workspace 6
     for_window [class="Signal"] move to workspace 7
+    for_window [app_id="signal"] move to workspace 7
+
     for_window [app_id="org.qbittorrent.qBittorrent"] move to workspace 8
     for_window [app_id="virt-manager"] move to workspace 9
+    for_window [app_id="lutris"] move to workspace 6
 
 #   Fix swayidle for fullscreen
     for_window [class=".*"] inhibit_idle fullscreen
     for_window [app_id=".*"] inhibit_idle fullscreen
+    for_window [instance="steamwebhelper"] floating
 
 
 # class                 border  backgr. text    indicator child_border
@@ -175,7 +194,7 @@ client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
-titlebar_padding 3
+titlebar_padding  2
 titlebar_border_thickness 1
 
 # status bar

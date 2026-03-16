@@ -1,0 +1,22 @@
+[manager]
+show_hidden = true      # set hidden true
+show_symlink = true     # default, but explicit
+sort_by = "natural"     # default case-insensitive natural sort (matches ignorecase true)
+sort_sensitive = false
+sort_reverse = false
+sort_dir_first = true
+
+[preview]
+max_width = 1000        # reasonable for image previews
+max_height = 900
+
+[opener]
+play = [
+    { run = 'mpv --force-window "$@"', orphan = true, for = "unix" },
+]
+
+[open]
+append_rules = [  # Or prepend_rules to override
+  { mime = "audio/*", use = "play" },
+  { mime = "video/*", use = [ "play", "reveal" ] },
+]

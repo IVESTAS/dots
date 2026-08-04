@@ -1,16 +1,19 @@
 exec ~/.local/share/sway/autostart
-exec dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-
+exec_always dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY
+exec_always export XDG_CURRENT_DESKTOP=sway
 #swaymsg -t get_outputs
 output DP-1 {
     mode 1920x1080@240Hz
+		#mode 1024x768@240Hz
+#    mode --custom 1280x960@240Hz
     pos 0,0
     #bg #313244 solid_color
     #bg ~/extra/pics/wallpapers/dark_abstract.png fill
     #bg ~/extra/pics/wallpapers/mac_os.jpg fill
 		bg ~/extra/pics/wallpapers/winter.jpg fill
     scale 1
-	  allow_tearing yes
+		allow_tearing no 
+    adaptive_sync off
 }
 
 output HDMI-A-1 {
@@ -78,7 +81,9 @@ input "type:pointer" {
     bindsym $mod+Shift+BackSpace exec loginctl poweroff 
     bindsym $mod+Shift+mod1+BackSpace exec loginctl reboot
 
-		bindsym $mod+F10 exec ~/.local/bin/save-replay.sh
+	bindsym $mod+F10 exec ~/.local/bin/save-replay.sh
+    bindsym $mod+F11 exec swaymsg 'output DP-1 mode --custom 1280x960@240Hz'
+    bindsym $mod+F12 exec swaymsg 'output DP-1 mode 1920x1080@240Hz'
 
 
 ###############################################################################

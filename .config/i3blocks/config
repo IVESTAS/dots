@@ -3,15 +3,10 @@ align=center
 separator=false
 separator_block_width=7
 
-
-#[bracket-left]
-#command=echo "["
-#interval=once
-#
-#[trillasFUCK]
-#command=~/.local/bin/statusbar/sb-taf
-#interval=1
-#align=center
+[sep]
+[net]
+command=~/.local/bin/statusbar/sb-net
+interval=1                           [sep]
 
 [sep]
 [root-dir]
@@ -32,10 +27,6 @@ label=/:
 #label=RAM:  
 
 #[sep]
-
-#[net]
-#command=~/.local/bin/statusbar/sb-net
-#interval=1
 
 [sep]
 
@@ -74,10 +65,14 @@ interval=3
 #command=echo "["
 #interval=once
 
-
 [time]
 command=~/.local/bin/statusbar/sb-day
 interval=1
+
+[replay]
+command=~/.local/bin/heck-for-replay
+interval=once
+signal=12
 
 #[bracket-right]
 #command=echo "]"

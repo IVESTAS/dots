@@ -20,7 +20,7 @@ exec hypridle &
 exec corectrl -m manual &
 exec mullvad-vpn &
 exec solaar --winddow=hide &
-exec start-replay.sh &
+#exec start-replay.sh &
 
 exec = ~/.local/bin/slvol &
 exec swaymsg focus output DP-1 &

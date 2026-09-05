@@ -9,15 +9,25 @@ exec /usr/bin/wireplumber &
 exec swaymsg focus output DP-1 &
 
 exec dunst &
-exec lxsession &
+exec lxpolkit &
 exec signal-desktop --start-in-tray &
 
 killall openrgb 
-exec openrgb --startminimized --profile icey.orp &
+#exec openrgb --startminimized --profile icey.orp &
+exec openrgb --startminimized --profile purpngold.orp &
 
 exec hypridle &
+exec corectrl -m manual &
+exec mullvad-vpn &
+exec solaar --winddow=hide &
+exec start-replay.sh &
+
+exec = ~/.local/bin/slvol &
+exec swaymsg focus output DP-1 &
 
 sleep 2.0
 pkill -RTMIN+10 i3blocks
 sleep 8.0
 pkill -RTMIN+3 i3blocks 
+
+

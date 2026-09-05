@@ -1,12 +1,12 @@
 #!/bin/bash
 
 case $BLOCK_BUTTON in
-    1) # left click
-      save-replay.sh
-      ;;
-    3) # right click
-      shutdown-replay.sh
-      ;;
+  1) # left click
+    save-replay.sh
+    ;;
+  3) # right click
+    shutdown-replay.sh
+    ;;
 esac
 
 if pidof -q gpu-screen-recorder; then

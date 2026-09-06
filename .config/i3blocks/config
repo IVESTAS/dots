@@ -6,7 +6,7 @@ separator_block_width=7
 [sep]
 [net]
 command=~/.local/bin/statusbar/sb-net
-interval=1                           [sep]
+interval=1                           
 
 [sep]
 [root-dir]

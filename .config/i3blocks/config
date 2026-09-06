@@ -70,7 +70,7 @@ command=~/.local/bin/statusbar/sb-day
 interval=1
 
 [replay]
-command=~/.local/bin/heck-for-replay
+command=~/.local/bin/check-for-replay
 interval=once
 signal=12
 

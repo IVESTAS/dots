@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#grok outdoing yall
+
+f=/tmp/trillstate
+
+[[ -f $f ]] && read i < $f || i=0
+
+case $i in
+  0) echo "trill as fuck" ;;
+  1) echo "as fuck"       ;;
+  2) echo "fuck"          ;;
+  3) echo ""                    ;;  # nothing (empty line)
+esac
+
+i=$(( (i + 1) % 4 ))
+
+echo $i > "$f"

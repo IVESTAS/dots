@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+t="trill as fuck"
+echo "${t:$(( $(date +%s) % ${#t} ))}"
